@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snowview Automobiles Pvt. Ltd. – Shimla</title>
+  <meta name="description" content="Snowview Automobiles Pvt. Ltd., Shimla – Customer Support & Escalation Matrix. Reach us for any service-related queries, assistance, or feedback.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f8;
+      color: #1e293b;
+      min-height: 100vh;
+    }
+
+    /* ── Hero ─────────────────────────────────── */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 340px;
+      overflow: hidden;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.65);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
+    .hero-overlay .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.8);
+      margin-bottom: 16px;
+      filter: brightness(1);
+    }
+    .hero-overlay h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .hero-overlay p {
+      font-size: 0.95rem;
+      margin-top: 6px;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    /* ── Container ────────────────────────────── */
+    .container {
+      max-width: 680px;
+      margin: -50px auto 0;
+      position: relative;
+      z-index: 2;
+      padding: 0 16px 60px;
+    }
+
+    /* ── Greeting Card ────────────────────────── */
+    .greeting-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .greeting-card h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .greeting-card p {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: #475569;
+    }
+
+    /* ── Section Title ────────────────────────── */
+    .section-title {
+      text-align: center;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Contact Cards ────────────────────────── */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      transition: box-shadow 0.2s ease;
+    }
+    .card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .card .level-badge {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .level-1 .level-badge { background: #3b82f6; }
+    .level-2 .level-badge { background: #f59e0b; }
+    .level-3 .level-badge { background: #10b981; }
+
+    .card .info {
+      flex: 1;
+      min-width: 0;
+    }
+    .card .info .role {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #94a3b8;
+      margin-bottom: 3px;
+    }
+    .card .info .name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .card .phone-btn {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0f7ff;
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+    }
+    .card .phone-btn:hover {
+      background: #dbeafe;
+    }
+
+    /* ── Footer ────────────────────────────────── */
+    .footer {
+      text-align: center;
+      margin-top: 12px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .footer p {
+      font-size: 0.88rem;
+      color: #64748b;
+      line-height: 1.6;
+    }
+    .footer .highlight {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    /* ── Responsive – Tablets ─────────────────── */
+    @media (max-width: 700px) {
+      .hero { height: 280px; }
+      .hero-overlay h1 { font-size: 1.4rem; }
+      .container { max-width: 100%; padding: 0 14px 40px; }
+    }
+
+    /* ── Responsive – Phones ─────────────────── */
+    @media (max-width: 480px) {
+      body { background: #f0f2f5; }
+
+      .hero { height: 240px; }
+      .hero img { object-position: center center; }
+      .hero-overlay { padding: 16px; }
+      .hero-overlay .logo {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 12px;
+        border-width: 2px;
+      }
+      .hero-overlay h1 {
+        font-size: 1.15rem;
+        line-height: 1.35;
+      }
+      .hero-overlay p { font-size: 0.85rem; }
+
+      .container {
+        margin-top: -36px;
+        padding: 0 10px 32px;
+      }
+
+      .greeting-card {
+        padding: 22px 16px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+      .greeting-card h2 { font-size: 1.02rem; }
+      .greeting-card p { font-size: 0.85rem; }
+
+      .section-title {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+      }
+
+      /* Stack card contents vertically on mobile */
+      .card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 12px;
+      }
+
+      .card .level-badge {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        padding: 8px 16px;
+        font-size: 0.65rem;
+        justify-content: flex-start;
+      }
+
+      .card .info {
+        padding: 14px 16px 10px;
+      }
+      .card .info .role { font-size: 0.68rem; margin-bottom: 2px; }
+      .card .info .name { font-size: 0.95rem; }
+
+      .card .phone-btn {
+        width: 100%;
+        justify-content: center;
+        border-radius: 0;
+        padding: 14px 16px;
+        font-size: 0.92rem;
+        background: #eef5ff;
+        /* Larger tap target for fingers */
+        min-height: 48px;
+        -webkit-tap-highlight-color: rgba(37, 99, 235, 0.15);
+      }
+      .card .phone-btn:active {
+        background: #c7dbff;
+      }
+
+      .footer {
+        border-radius: 12px;
+        padding: 18px 14px;
+        margin-top: 8px;
+      }
+      .footer p { font-size: 0.82rem; }
+    }
+
+    /* ── Very small phones (SE, etc.) ──────────── */
+    @media (max-width: 360px) {
+      .hero { height: 200px; }
+      .hero-overlay .logo { width: 56px; height: 56px; }
+      .hero-overlay h1 { font-size: 1.02rem; }
+      .container { padding: 0 8px 28px; }
+      .greeting-card h2 { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="hero_bg.jpg" alt="Snowview Automobiles Showroom, Shimla">
+    <div class="hero-overlay">
+      <img class="logo" src="logo.jpg" alt="Snowview Automobiles Logo">
+      <h1>Snowview Automobiles Pvt. Ltd.</h1>
+      <p>Shimla, Himachal Pradesh</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="container">
+
+    <!-- Greeting -->
+    <div class="greeting-card">
+      <h2>🙏 Greetings from Snowview Automobiles!</h2>
+      <p>For any service-related queries, assistance, or feedback, please feel free to reach out to our team using the numbers below.</p>
+    </div>
+
+    <!-- Escalation Matrix -->
+    <h2 class="section-title">Customer Support &amp; Escalation Matrix</h2>
+
+    <!-- Level 1 -->
+    <div class="card level-1">
+      <div class="level-badge">L1</div>
+      <div class="info">
+        <div class="role">Level 1 – Service Advisor</div>
+        <div class="name">Mr. Ankush Verma</div>
+      </div>
+      <a href="tel:+919816100646" class="phone-btn" id="call-level-1">📞 9816100646</a>
+    </div>
+
+    <!-- Level 2 -->
+    <div class="card level-2">
+      <div class="level-badge">L2</div>
+      <div class="info">
+        <div class="role">Level 2 – Service Manager</div>
+        <div class="name">Mr. Dheeraj Bansal</div>
+      </div>
+      <a href="tel:+919218599642" class="phone-btn" id="call-level-2">📞 9218599642</a>
+    </div>
+
+    <!-- Level 3 -->
+    <div class="card level-3">
+      <div class="level-badge">L3</div>
+      <div class="info">
+        <div class="role">Level 3 – Service Head</div>
+        <div class="name">Mr. Subash Chauhan</div>
+      </div>
+      <a href="tel:+919816100637" class="phone-btn" id="call-level-3">📞 9816100637</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p><span class="highlight">Your satisfaction is our priority.</span><br>We are always here to assist you!</p>
+    </div>
+
+  </main>
+
+</body>
+</html>
